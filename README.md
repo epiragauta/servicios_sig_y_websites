@@ -108,7 +108,8 @@ Este material está disponible para fines educativos.
 
 ## Autor
 
-Curso de Servicios Web Geográficos - 2024
+Edwin Piragauta Vargas - 2025
+
 
 ## Contribuciones
 
