@@ -5,7 +5,7 @@
 - Comprender qué es Git y por qué es importante
 - Instalar Git en Windows
 - Aprender comandos básicos de Git
-- Clonar el repositorio del taller
+- Clonar el repositorio del cirso
 
 ## 1.1 ¿Qué es Git?
 
@@ -42,11 +42,11 @@ Git es un sistema de control de versiones distribuido que permite:
 Durante la instalación, se presentarán varias opciones:
 
 #### Selección de componentes
-- ✅ **Windows Explorer integration** (recomendado)
-- ✅ **Git Bash Here**
-- ✅ **Git GUI Here**
-- ✅ **Associate .git configuration files**
-- ✅ **Associate .sh files to be run with Bash**
+- - **Windows Explorer integration** (recomendado)
+- - **Git Bash Here**
+- - **Git GUI Here**
+- - **Associate .git configuration files**
+- - **Associate .sh files to be run with Bash**
 
 #### Editor por defecto
 - Selecciona tu editor preferido (Vim, Nano, Notepad++, VS Code, etc.)
@@ -78,8 +78,8 @@ Durante la instalación, se presentarán varias opciones:
 - Selecciona: **Git Credential Manager**
 
 #### Opciones extras
-- ✅ Enable file system caching
-- ✅ Enable symbolic links
+- - Enable file system caching
+- - Enable symbolic links
 
 4. Haz clic en **Install**
 
@@ -211,7 +211,7 @@ git push
 
 ### Obtener la URL del Repositorio
 
-Para este taller, necesitas clonar el repositorio que contiene los datos y ejercicios.
+Para este cirso, necesitas clonar el repositorio que contiene los datos y ejercicios.
 
 1. Abre **Git Bash**
 2. Navega al directorio donde quieres descargar el proyecto:
@@ -241,7 +241,7 @@ ls -la
 Deberías ver:
 ```
 drwxr-xr-x  data/
-drwxr-xr-x  taller/
+drwxr-xr-x  cirso/
 -rw-r--r--  README.md
 ```
 
@@ -349,11 +349,11 @@ git help commit
 
 En este capítulo has aprendido:
 
-✅ Qué es Git y su importancia en el desarrollo de software
-✅ Cómo instalar Git en Windows paso a paso
-✅ Comandos básicos para trabajar con repositorios
-✅ Cómo clonar el repositorio del taller
-✅ El flujo de trabajo básico con Git
+- Qué es Git y su importancia en el desarrollo de software
+- Cómo instalar Git en Windows paso a paso
+- Comandos básicos para trabajar con repositorios
+- Cómo clonar el repositorio del cirso
+- El flujo de trabajo básico con Git
 
 ## Ejercicio Práctico
 
@@ -361,7 +361,7 @@ En este capítulo has aprendido:
 2. Explora el directorio `data/` y familiarízate con los archivos
 3. Crea un archivo de texto llamado `notas.txt` con tus observaciones
 4. Agrega el archivo al staging con `git add notas.txt`
-5. Haz un commit con el mensaje "Agregar mis notas del taller"
+5. Haz un commit con el mensaje "Agregar mis notas del cirso"
 6. Verifica el historial con `git log`
 
 ## Referencias

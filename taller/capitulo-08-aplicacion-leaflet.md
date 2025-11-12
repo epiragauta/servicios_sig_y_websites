@@ -32,18 +32,18 @@
 |----------------|---------|------------|-------------|
 | **Tamaño** | 42 KB | ~200 KB | ~500 KB |
 | **Curva de aprendizaje** | Baja | Media | Baja |
-| **Código abierto** | ✅ | ✅ | ❌ |
+| **Código abierto** | - | - | ❌ |
 | **Soporte OGC** | Plugin | Nativo | Limitado |
 | **Personalización** | Alta | Muy alta | Media |
 | **Mobile** | Excelente | Buena | Buena |
 
 ### ¿Cuándo Usar Leaflet?
 
-✅ Mapas web ligeros y rápidos
-✅ Aplicaciones móviles
-✅ Proyectos con servicios OGC (WMS, WFS)
-✅ Necesitas control total del diseño
-✅ Proyecto de código abierto
+- Mapas web ligeros y rápidos
+- Aplicaciones móviles
+- Proyectos con servicios OGC (WMS, WFS)
+- Necesitas control total del diseño
+- Proyecto de código abierto
 
 ## 8.2 Configuración del Proyecto
 
@@ -520,7 +520,7 @@ const popupContent = `
 layer.bindPopup(popupContent);
 ```
 
-## 8.9 Ejemplo Completo: Aplicación del Taller
+## 8.9 Ejemplo Completo: Aplicación del Curso
 
 ### index.html
 
@@ -754,16 +754,16 @@ Si tienes problemas de CORS con GeoServer:
 
 En este capítulo has aprendido:
 
-✅ Qué es Leaflet y sus características
-✅ Configurar un proyecto web con Leaflet
-✅ Crear un mapa interactivo básico
-✅ Consumir servicios WMS de GeoServer
-✅ Consumir servicios WFS de GeoServer
-✅ Agregar interactividad con popups y eventos
-✅ Implementar controles personalizados
-✅ Crear leyendas y paneles de información
-✅ Estilizar capas por atributos
-✅ Desplegar la aplicación
+- Qué es Leaflet y sus características
+- Configurar un proyecto web con Leaflet
+- Crear un mapa interactivo básico
+- Consumir servicios WMS de GeoServer
+- Consumir servicios WFS de GeoServer
+- Agregar interactividad con popups y eventos
+- Implementar controles personalizados
+- Crear leyendas y paneles de información
+- Estilizar capas por atributos
+- Desplegar la aplicación
 
 ## Ejercicio Práctico
 
@@ -791,7 +791,7 @@ En este capítulo has aprendido:
 
 **Capítulo anterior**: [Capítulo 7: Publicación de Capas en GeoServer](./capitulo-07-publicacion-geoserver.md)
 
-**¡Felicitaciones!** Has completado el taller de Servicios Web Geográficos.
+**¡Felicitaciones!** Has completado el cirso de Servicios Web Geográficos.
 
 ---
 
@@ -799,14 +799,14 @@ En este capítulo has aprendido:
 
 Crea una aplicación web completa que:
 
-1. ✅ Consuma servicios WMS y WFS de GeoServer
-2. ✅ Muestre departamentos y municipios de Colombia
-3. ✅ Permita alternar entre capas
-4. ✅ Muestre información al hacer clic
-5. ✅ Incluya una leyenda
-6. ✅ Tenga un panel de información
-7. ✅ Sea responsive (funcione en móvil)
-8. ✅ Esté desplegada en línea
+1. - Consuma servicios WMS y WFS de GeoServer
+2. - Muestre departamentos y municipios de Colombia
+3. - Permita alternar entre capas
+4. - Muestre información al hacer clic
+5. - Incluya una leyenda
+6. - Tenga un panel de información
+7. - Sea responsive (funcione en móvil)
+8. - Esté desplegada en línea
 
 **Bonus**:
 - Agregar búsqueda de departamentos

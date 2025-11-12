@@ -77,10 +77,10 @@
 
 #### Selección de Componentes
 Asegúrate de tener seleccionados:
-- ✅ **PostgreSQL Server** (servidor de base de datos)
-- ✅ **pgAdmin 4** (herramienta de administración gráfica)
-- ✅ **Stack Builder** (para instalar extensiones como PostGIS)
-- ✅ **Command Line Tools** (herramientas de línea de comandos)
+- - **PostgreSQL Server** (servidor de base de datos)
+- - **pgAdmin 4** (herramienta de administración gráfica)
+- - **Stack Builder** (para instalar extensiones como PostGIS)
+- - **Command Line Tools** (herramientas de línea de comandos)
 
 Haz clic en **Next**
 
@@ -115,7 +115,7 @@ Haz clic en **Next**
 
 #### Stack Builder
 - Al finalizar, te preguntará si quieres ejecutar **Stack Builder**
-- ✅ **Marca la casilla** (lo usaremos para instalar PostGIS)
+- - **Marca la casilla** (lo usaremos para instalar PostGIS)
 - Haz clic en **Finish**
 
 ### Paso 4: Verificar la Instalación
@@ -173,7 +173,7 @@ Si no se abrió automáticamente:
 #### Paso 2: Seleccionar PostGIS
 
 1. Expande **Spatial Extensions**
-2. Marca ✅ **PostGIS x.x Bundle for PostgreSQL 16**
+2. Marca - **PostGIS x.x Bundle for PostgreSQL 16**
 3. Haz clic en **Next**
 
 #### Paso 3: Descargar e Instalar
@@ -236,7 +236,7 @@ Deberías ver varios cientos de funciones espaciales.
 \q
 ```
 
-## 2.5 Crear la Base de Datos para el Taller
+## 2.5 Crear la Base de Datos para el Curso
 
 ### Paso 1: Crear la Base de Datos
 
@@ -514,14 +514,14 @@ WHERE tablename = 'ciudades';
 
 En este capítulo has aprendido:
 
-✅ Qué son PostgreSQL y PostGIS
-✅ Cómo instalar PostgreSQL en Windows
-✅ Cómo instalar la extensión PostGIS
-✅ Crear una base de datos espacial
-✅ Herramientas de administración (pgAdmin 4, psql)
-✅ Realizar consultas espaciales básicas
-✅ Trabajar con sistemas de referencia espacial
-✅ Crear índices espaciales para mejorar rendimiento
+- Qué son PostgreSQL y PostGIS
+- Cómo instalar PostgreSQL en Windows
+- Cómo instalar la extensión PostGIS
+- Crear una base de datos espacial
+- Herramientas de administración (pgAdmin 4, psql)
+- Realizar consultas espaciales básicas
+- Trabajar con sistemas de referencia espacial
+- Crear índices espaciales para mejorar rendimiento
 
 ## Ejercicio Práctico
 

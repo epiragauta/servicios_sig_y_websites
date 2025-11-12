@@ -33,12 +33,12 @@
 
 ### ¿Por qué GeoServer?
 
-- ✅ **Código abierto** y gratuito
-- ✅ **Cumplimiento de estándares** OGC
-- ✅ **Ampliamente adoptado** en la industria
-- ✅ **Comunidad activa** y documentación extensa
-- ✅ **Integración con PostGIS** y otras bases de datos
-- ✅ **Alto rendimiento** y escalabilidad
+- - **Código abierto** y gratuito
+- - **Cumplimiento de estándares** OGC
+- - **Ampliamente adoptado** en la industria
+- - **Comunidad activa** y documentación extensa
+- - **Integración con PostGIS** y otras bases de datos
+- - **Alto rendimiento** y escalabilidad
 
 ## 3.2 Requisitos del Sistema
 
@@ -78,9 +78,9 @@ GeoServer requiere Java Runtime Environment (JRE) o Java Development Kit (JDK).
 1. Ejecuta el archivo descargado (`OpenJDK17-jre_x64_windows.msi`)
 2. Acepta la licencia
 3. En **Custom Setup**:
-   - ✅ **Add to PATH** (importante)
-   - ✅ **JAVA_HOME variable**
-   - ✅ **JavaSoft (Oracle) registry keys**
+   - - **Add to PATH** (importante)
+   - - **JAVA_HOME variable**
+   - - **JavaSoft (Oracle) registry keys**
 4. Haz clic en **Next** e **Install**
 5. Finaliza la instalación
 
@@ -360,8 +360,8 @@ Herramientas de demostración:
 
 **Settings** → **Global**:
 
-- **Verbose Messages**: ✅ (durante desarrollo)
-- **Verbose Exceptions**: ✅ (durante desarrollo)
+- **Verbose Messages**: - (durante desarrollo)
+- **Verbose Exceptions**: - (durante desarrollo)
 - **Number of Decimals**: `8`
 - **Character Set**: `UTF-8`
 - **Proxy Base URL**: `http://tu-servidor.com/geoserver` (en producción)
@@ -503,21 +503,21 @@ C:\Program Files\GeoServer\logs\geoserver.log
 
 ### Desarrollo
 
-- ✅ Usa `startup.bat` para desarrollo
-- ✅ Activa mensajes detallados y excepciones
-- ✅ Revisa logs regularmente
-- ✅ Usa Layer Preview para probar cambios
+- - Usa `startup.bat` para desarrollo
+- - Activa mensajes detallados y excepciones
+- - Revisa logs regularmente
+- - Usa Layer Preview para probar cambios
 
 ### Producción
 
-- ✅ Instala como servicio de Windows
-- ✅ Cambia credenciales por defecto
-- ✅ Desactiva mensajes verbosos
-- ✅ Configura Proxy Base URL
-- ✅ Implementa control de acceso
-- ✅ Habilita HTTPS
-- ✅ Configura backup automático del data_dir
-- ✅ Monitorea uso de memoria y rendimiento
+- - Instala como servicio de Windows
+- - Cambia credenciales por defecto
+- - Desactiva mensajes verbosos
+- - Configura Proxy Base URL
+- - Implementa control de acceso
+- - Habilita HTTPS
+- - Configura backup automático del data_dir
+- - Monitorea uso de memoria y rendimiento
 
 ### Seguridad
 
@@ -531,16 +531,16 @@ C:\Program Files\GeoServer\logs\geoserver.log
 
 En este capítulo has aprendido:
 
-✅ Qué es GeoServer y sus capacidades
-✅ Requisitos del sistema
-✅ Instalar Java en Windows
-✅ Instalar GeoServer en Windows
-✅ Configurar GeoServer como servicio
-✅ Navegar por la interfaz de administración
-✅ Configuración inicial recomendada
-✅ Visualizar capas de demostración
-✅ Monitorear el servidor y revisar logs
-✅ Mejores prácticas de seguridad
+- Qué es GeoServer y sus capacidades
+- Requisitos del sistema
+- Instalar Java en Windows
+- Instalar GeoServer en Windows
+- Configurar GeoServer como servicio
+- Navegar por la interfaz de administración
+- Configuración inicial recomendada
+- Visualizar capas de demostración
+- Monitorear el servidor y revisar logs
+- Mejores prácticas de seguridad
 
 ## Ejercicio Práctico
 

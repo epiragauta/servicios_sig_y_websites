@@ -46,7 +46,7 @@ Workspace (Espacio de Trabajo)
 2. Configura:
    - **Name**: `taller`
    - **Namespace URI**: `http://www.geoserver.org/taller`
-   - ✅ **Default Workspace** (opcional)
+   - - **Default Workspace** (opcional)
    - **Isolated Workspace**: Dejar desmarcado
 3. Haz clic en **Submit**
 
@@ -92,8 +92,8 @@ http://localhost:8080/geoserver/taller/wfs
 
 - **Workspace**: `taller`
 - **Data Source Name**: `taller_postgis`
-- **Description**: `Base de datos PostGIS con datos del taller`
-- ✅ **Enabled**
+- **Description**: `Base de datos PostGIS con datos del cirso`
+- - **Enabled**
 
 #### Parámetros de Conexión
 
@@ -113,10 +113,10 @@ http://localhost:8080/geoserver/taller/wfs
 - **min connections**: `1`
 - **fetch size**: `1000` (registros por consulta)
 - **Connection timeout**: `20` segundos
-- **validate connections**: ✅ (verificar conexiones)
+- **validate connections**: - (verificar conexiones)
 - **Primary key metadata table**: Dejar en blanco
 - **Loose bbox**: ❌ (usar bbox exacto)
-- **Estimated extends**: ✅ (estimación rápida de extensiones)
+- **Estimated extends**: - (estimación rápida de extensiones)
 - **Expose primary keys**: ❌
 
 ### Paso 4: Guardar
@@ -167,8 +167,8 @@ Después de guardar el store, aparece automáticamente la lista de capas:
 - **Name**: `departamentos`
 - **Title**: `Departamentos de Colombia`
 - **Abstract**: `División administrativa de primer nivel de Colombia`
-- ✅ **Enabled**
-- ✅ **Advertised**
+- - **Enabled**
+- - **Advertised**
 
 **Keywords**:
 - Agrega palabras clave: `departamentos`, `colombia`, `administración`, `división`
@@ -199,7 +199,7 @@ Native Bounding Box:
 #### Pestaña Publishing
 
 **WMS Settings**:
-- **Queryable**: ✅ (permite GetFeatureInfo)
+- **Queryable**: - (permite GetFeatureInfo)
 - **Opaque**: ❌
 
 **WFS Settings**:
@@ -211,7 +211,7 @@ Native Bounding Box:
 
 #### Pestaña Tile Caching
 
-- **Create a cached layer for this layer**: ✅ (opcional, mejora rendimiento)
+- **Create a cached layer for this layer**: - (opcional, mejora rendimiento)
 
 ### Paso Final: Guardar
 
@@ -542,7 +542,7 @@ GeoServer incluye GeoWebCache integrado.
 
 1. Ve a **Data** → **Layers** → `taller:departamentos`
 2. Pestaña **Tile Caching**
-3. ✅ **Create a cached layer for this layer**
+3. - **Create a cached layer for this layer**
 4. **Tile cache configuration**:
    - **Gridsets**: Selecciona `EPSG:4326`, `EPSG:900913` (Web Mercator)
    - **Tile Formats**: `image/png`, `image/jpeg`
@@ -584,8 +584,8 @@ VACUUM ANALYZE municipios;
 En el store `taller_postgis`:
 - **max connections**: `10`
 - **fetch size**: `1000`
-- ✅ **validate connections**
-- ✅ **Estimated extends**
+- - **validate connections**
+- - **Estimated extends**
 
 ### Configuración Global
 
@@ -626,16 +626,16 @@ Sin autenticación, algunos servicios devolverán error 403.
 
 En este capítulo has aprendido:
 
-✅ Crear espacios de trabajo (workspaces)
-✅ Configurar almacenes de datos PostGIS
-✅ Conectar GeoServer a PostgreSQL
-✅ Publicar capas de departamentos y municipios
-✅ Aplicar estilos SLD personalizados
-✅ Configurar metadatos de capas
-✅ Probar servicios WMS y WFS
-✅ Crear grupos de capas
-✅ Optimizar rendimiento con caché
-✅ Configurar seguridad básica
+- Crear espacios de trabajo (workspaces)
+- Configurar almacenes de datos PostGIS
+- Conectar GeoServer a PostgreSQL
+- Publicar capas de departamentos y municipios
+- Aplicar estilos SLD personalizados
+- Configurar metadatos de capas
+- Probar servicios WMS y WFS
+- Crear grupos de capas
+- Optimizar rendimiento con caché
+- Configurar seguridad básica
 
 ## Ejercicio Práctico
 

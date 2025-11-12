@@ -1,6 +1,6 @@
 /**
  * Aplicación de Visualización de Departamentos y Municipios de Colombia
- * Taller de Servicios Web Geográficos
+ * Curso de Servicios Web Geográficos
  */
 
 // ============================================

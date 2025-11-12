@@ -1,8 +1,8 @@
-# Taller de Servicios Web Geográficos
+# Curso de Servicios Web Geográficos
 
 ## Descripción
 
-Este taller proporciona una guía práctica completa para trabajar con servicios web geográficos, estándares de información geoespacial, y desarrollo de aplicaciones web cartográficas.
+Este cirso proporciona una guía práctica completa para trabajar con servicios web geográficos, estándares de información geoespacial, y desarrollo de aplicaciones web cartográficas.
 
 ## Objetivo
 
@@ -14,7 +14,7 @@ Aprender a configurar, administrar y consumir servicios web geográficos utiliza
 - Conexión a internet
 - Equipo con Windows (las instrucciones están orientadas a este sistema operativo)
 
-## Contenido del Taller
+## Contenido del Curso
 
 ### [Capítulo 1: Introducción a Git](./capitulo-01-git.md)
 - ¿Qué es Git?
@@ -71,7 +71,7 @@ Aprender a configurar, administrar y consumir servicios web geográficos utiliza
 - Aplicación práctica: Visualización de departamentos y municipios
 - Interactividad y controles
 
-## Datos del Taller
+## Datos del Curso
 
 El directorio `data/` contiene los siguientes conjuntos de datos:
 
@@ -90,7 +90,7 @@ servicios_sig_y_websites/
 │   ├── municipios.shp             # Shapefile de municipios
 │   ├── municipios.geojson         # GeoJSON de municipios
 │   └── municipios.sld             # Estilo para municipios
-├── taller/                        # Documentación del taller
+├── cirso/                        # Documentación del cirso
 │   ├── capitulo-01-git.md
 │   ├── capitulo-02-postgresql-postgis.md
 │   ├── capitulo-03-geoserver.md

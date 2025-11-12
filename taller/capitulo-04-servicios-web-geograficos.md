@@ -591,40 +591,40 @@ curl "http://localhost:8080/geoserver/wfs?service=WFS&version=2.0.0&request=GetF
 
 ### Rendimiento
 
-- ✅ Usa caché (WMTS) para capas que no cambian frecuentemente
-- ✅ Limita el número de elementos en WFS con `count`
-- ✅ Usa BBOX para limitar el área de consulta
-- ✅ Selecciona solo las propiedades necesarias con `propertyName`
-- ✅ Crea índices espaciales en la base de datos
+- - Usa caché (WMTS) para capas que no cambian frecuentemente
+- - Limita el número de elementos en WFS con `count`
+- - Usa BBOX para limitar el área de consulta
+- - Selecciona solo las propiedades necesarias con `propertyName`
+- - Crea índices espaciales en la base de datos
 
 ### Seguridad
 
-- ✅ Valida y sanitiza parámetros de entrada
-- ✅ Implementa límites de rate limiting
-- ✅ Usa HTTPS en producción
-- ✅ Configura control de acceso por capa
-- ✅ No expongas capas sensibles públicamente
+- - Valida y sanitiza parámetros de entrada
+- - Implementa límites de rate limiting
+- - Usa HTTPS en producción
+- - Configura control de acceso por capa
+- - No expongas capas sensibles públicamente
 
 ### Compatibilidad
 
-- ✅ Soporta múltiples versiones de WMS/WFS
-- ✅ Ofrece múltiples formatos de salida
-- ✅ Documenta los SRS soportados
-- ✅ Proporciona metadatos completos en GetCapabilities
+- - Soporta múltiples versiones de WMS/WFS
+- - Ofrece múltiples formatos de salida
+- - Documenta los SRS soportados
+- - Proporciona metadatos completos en GetCapabilities
 
 ## Resumen
 
 En este capítulo has aprendido:
 
-✅ Qué es OGC y su importancia
-✅ Arquitectura de servicios web geográficos
-✅ WMS: Operaciones, parámetros y casos de uso
-✅ WFS: Operaciones, parámetros y casos de uso
-✅ Diferencias entre WMS y WFS
-✅ Otros servicios OGC (WCS, WMTS, WPS)
-✅ Cómo construir peticiones HTTP
-✅ Cómo probar servicios con navegador y cURL
-✅ Mejores prácticas de rendimiento y seguridad
+- Qué es OGC y su importancia
+- Arquitectura de servicios web geográficos
+- WMS: Operaciones, parámetros y casos de uso
+- WFS: Operaciones, parámetros y casos de uso
+- Diferencias entre WMS y WFS
+- Otros servicios OGC (WCS, WMTS, WPS)
+- Cómo construir peticiones HTTP
+- Cómo probar servicios con navegador y cURL
+- Mejores prácticas de rendimiento y seguridad
 
 ## Ejercicio Práctico
 

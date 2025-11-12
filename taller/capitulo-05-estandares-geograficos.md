@@ -186,7 +186,7 @@ Atributos del feature:
 
 **GeoJSON usa [longitud, latitud]**, no [latitud, longitud]:
 
-✅ **Correcto**:
+- **Correcto**:
 ```json
 "coordinates": [-74.0721, 4.7110]  // [lon, lat]
 ```
@@ -332,11 +332,11 @@ ogr2ogr -f GeoJSON departamentos.geojson PG:"host=localhost dbname=taller_gis us
 
 #### Ventajas
 
-✅ Fácil de leer y escribar
-✅ Compatible con JavaScript/web
-✅ No requiere software especial
-✅ Soportado ampliamente
-✅ Ideal para aplicaciones web
+- Fácil de leer y escribar
+- Compatible con JavaScript/web
+- No requiere software especial
+- Soportado ampliamente
+- Ideal para aplicaciones web
 
 #### Desventajas
 
@@ -548,7 +548,7 @@ Para etiquetas:
 
 ### Ejemplo Real: Estilo de Departamentos
 
-Este es el estilo SLD de los departamentos del taller:
+Este es el estilo SLD de los departamentos del cirso:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -825,15 +825,15 @@ Extensión de GeoJSON con topología:
 
 En este capítulo has aprendido:
 
-✅ Estructura y sintaxis de GeoJSON
-✅ Tipos de geometrías en GeoJSON
-✅ Cómo trabajar con archivos GeoJSON
-✅ Estructura y componentes de SLD
-✅ Simbolizadores para puntos, líneas y polígonos
-✅ Etiquetas con TextSymbolizer
-✅ Filtros y reglas condicionales
-✅ Ejemplos reales de SLD del taller
-✅ Otros formatos geográficos relevantes
+- Estructura y sintaxis de GeoJSON
+- Tipos de geometrías en GeoJSON
+- Cómo trabajar con archivos GeoJSON
+- Estructura y componentes de SLD
+- Simbolizadores para puntos, líneas y polígonos
+- Etiquetas con TextSymbolizer
+- Filtros y reglas condicionales
+- Ejemplos reales de SLD del cirso
+- Otros formatos geográficos relevantes
 
 ## Ejercicio Práctico
 

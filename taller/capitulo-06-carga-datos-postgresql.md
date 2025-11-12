@@ -5,7 +5,7 @@
 - Conocer herramientas para cargar datos geográficos
 - Usar shp2pgsql para cargar shapefiles
 - Usar ogr2ogr para cargar múltiples formatos
-- Cargar los datos del taller a PostgreSQL
+- Cargar los datos del cirso a PostgreSQL
 - Verificar y consultar los datos cargados
 - Crear índices espaciales
 - Optimizar el rendimiento
@@ -238,13 +238,13 @@ ogr2ogr -f "PostgreSQL" PG:"dbname=taller_gis user=postgres" datos.gpkg -overwri
 
 ### Ventajas de ogr2ogr
 
-✅ Soporta 50+ formatos (Shapefile, GeoJSON, KML, GML, GPX, etc.)
-✅ Reproyección automática
-✅ Filtros y transformaciones
-✅ Conversión entre formatos
-✅ Multiplataforma
+- Soporta 50+ formatos (Shapefile, GeoJSON, KML, GML, GPX, etc.)
+- Reproyección automática
+- Filtros y transformaciones
+- Conversión entre formatos
+- Multiplataforma
 
-## 6.4 Cargar Datos del Taller
+## 6.4 Cargar Datos del Curso
 
 ### Preparación
 
@@ -334,8 +334,8 @@ ogr2ogr -f "PostgreSQL" PG:"dbname=taller_gis user=postgres password=TuPassword"
    - **Geometry column**: `geom`
    - **Source SRID**: `4326`
    - **Target SRID**: `4326`
-   - ✅ **Create spatial index**
-   - ✅ **Convert field names to lowercase**
+   - - **Create spatial index**
+   - - **Convert field names to lowercase**
 9. Haz clic en **OK**
 
 ## 6.5 Verificar Datos Cargados
@@ -644,15 +644,15 @@ COPY (
 
 En este capítulo has aprendido:
 
-✅ Herramientas para cargar datos geográficos a PostgreSQL
-✅ Uso de shp2pgsql para cargar shapefiles
-✅ Uso de ogr2ogr para cargar múltiples formatos
-✅ Carga de los datos del taller (departamentos y municipios)
-✅ Verificación de datos cargados
-✅ Creación de índices espaciales
-✅ Consultas de verificación y validación
-✅ Optimización y mantenimiento
-✅ Exportación de datos desde PostgreSQL
+- Herramientas para cargar datos geográficos a PostgreSQL
+- Uso de shp2pgsql para cargar shapefiles
+- Uso de ogr2ogr para cargar múltiples formatos
+- Carga de los datos del cirso (departamentos y municipios)
+- Verificación de datos cargados
+- Creación de índices espaciales
+- Consultas de verificación y validación
+- Optimización y mantenimiento
+- Exportación de datos desde PostgreSQL
 
 ## Ejercicio Práctico
 

@@ -230,12 +230,12 @@ function featureStyle(feature) {
 
 ## Licencia
 
-Este proyecto es parte del Taller de Servicios Web Geográficos y está disponible para fines educativos.
+Este proyecto es parte del Curso de Servicios Web Geográficos y está disponible para fines educativos.
 
 ## Autor
 
-Taller de Servicios Web Geográficos - 2024
+Curso de Servicios Web Geográficos - 2024
 
 ---
 
-**¿Problemas?** Consulta los capítulos del taller o abre la consola del navegador (F12) para ver mensajes de error detallados.
+**¿Problemas?** Consulta los capítulos del cirso o abre la consola del navegador (F12) para ver mensajes de error detallados.
