@@ -1,6 +1,6 @@
 # Curso de Servicios Web Geográficos
 
-Repositorio del cirso práctico sobre servicios web geográficos (WMS y WFS), estándares OGC y desarrollo de aplicaciones web cartográficas.
+Repositorio del curso práctico sobre servicios web geográficos (WMS y WFS), estándares OGC y desarrollo de aplicaciones web cartográficas.
 
 ## Contenido
 
@@ -17,7 +17,7 @@ Aprender a configurar, administrar y consumir servicios web geográficos utiliza
 
 ## Curso
 
-El cirso está organizado en 8 capítulos:
+El curso está organizado en 8 capítulos:
 
 1. [Introducción a Git](./taller/capitulo-01-git.md)
 2. [Instalación de PostgreSQL y PostGIS](./taller/capitulo-02-postgresql-postgis.md)
@@ -83,7 +83,7 @@ Abre [http://localhost:8000](http://localhost:8000)
 - **Java 11 o 17** (para GeoServer)
 - **Navegador web moderno**
 
-## 📦 Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 - **PostgreSQL/PostGIS** - Base de datos espacial
 - **GeoServer** - Servidor de mapas OGC
@@ -92,7 +92,7 @@ Abre [http://localhost:8000](http://localhost:8000)
 
 ## Aprendizajes
 
-Al completar este cirso, serás capaz de:
+Al completar este curso, serás capaz de:
 
 - Instalar y configurar PostgreSQL con PostGIS
 - Instalar y configurar GeoServer
@@ -102,15 +102,15 @@ Al completar este cirso, serás capaz de:
 - Consumir servicios OGC desde aplicaciones web
 - Desarrollar aplicaciones web cartográficas con Leaflet
 
-## 📝 Licencia
+## Licencia
 
 Este material está disponible para fines educativos.
 
-## 👤 Autor
+## Autor
 
 Curso de Servicios Web Geográficos - 2024
 
-## 🤝 Contribuciones
+## Contribuciones
 
 Las contribuciones, correcciones y mejoras son bienvenidas. Por favor abre un issue o pull request.
 

@@ -5,7 +5,7 @@
 - Conocer herramientas para cargar datos geográficos
 - Usar shp2pgsql para cargar shapefiles
 - Usar ogr2ogr para cargar múltiples formatos
-- Cargar los datos del cirso a PostgreSQL
+- Cargar los datos del curso a PostgreSQL
 - Verificar y consultar los datos cargados
 - Crear índices espaciales
 - Optimizar el rendimiento
@@ -647,7 +647,7 @@ En este capítulo has aprendido:
 - Herramientas para cargar datos geográficos a PostgreSQL
 - Uso de shp2pgsql para cargar shapefiles
 - Uso de ogr2ogr para cargar múltiples formatos
-- Carga de los datos del cirso (departamentos y municipios)
+- Carga de los datos del curso (departamentos y municipios)
 - Verificación de datos cargados
 - Creación de índices espaciales
 - Consultas de verificación y validación

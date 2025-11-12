@@ -548,7 +548,7 @@ Para etiquetas:
 
 ### Ejemplo Real: Estilo de Departamentos
 
-Este es el estilo SLD de los departamentos del cirso:
+Este es el estilo SLD de los departamentos del curso:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -832,7 +832,7 @@ En este capítulo has aprendido:
 - Simbolizadores para puntos, líneas y polígonos
 - Etiquetas con TextSymbolizer
 - Filtros y reglas condicionales
-- Ejemplos reales de SLD del cirso
+- Ejemplos reales de SLD del curso
 - Otros formatos geográficos relevantes
 
 ## Ejercicio Práctico

@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Este cirso proporciona una guía práctica completa para trabajar con servicios web geográficos, estándares de información geoespacial, y desarrollo de aplicaciones web cartográficas.
+Este curso proporciona una guía práctica completa para trabajar con servicios web geográficos, estándares de información geoespacial, y desarrollo de aplicaciones web cartográficas.
 
 ## Objetivo
 
@@ -90,7 +90,7 @@ servicios_sig_y_websites/
 │   ├── municipios.shp             # Shapefile de municipios
 │   ├── municipios.geojson         # GeoJSON de municipios
 │   └── municipios.sld             # Estilo para municipios
-├── cirso/                        # Documentación del cirso
+├── curso/                        # Documentación del curso
 │   ├── capitulo-01-git.md
 │   ├── capitulo-02-postgresql-postgis.md
 │   ├── capitulo-03-geoserver.md

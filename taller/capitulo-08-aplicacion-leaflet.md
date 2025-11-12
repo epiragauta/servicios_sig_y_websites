@@ -791,7 +791,7 @@ En este capítulo has aprendido:
 
 **Capítulo anterior**: [Capítulo 7: Publicación de Capas en GeoServer](./capitulo-07-publicacion-geoserver.md)
 
-**¡Felicitaciones!** Has completado el cirso de Servicios Web Geográficos.
+**¡Felicitaciones!** Has completado el curso de Servicios Web Geográficos.
 
 ---
 

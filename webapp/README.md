@@ -238,4 +238,4 @@ Curso de Servicios Web Geográficos - 2024
 
 ---
 
-**¿Problemas?** Consulta los capítulos del cirso o abre la consola del navegador (F12) para ver mensajes de error detallados.
+**¿Problemas?** Consulta los capítulos del curso o abre la consola del navegador (F12) para ver mensajes de error detallados.

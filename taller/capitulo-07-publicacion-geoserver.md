@@ -92,7 +92,7 @@ http://localhost:8080/geoserver/taller/wfs
 
 - **Workspace**: `taller`
 - **Data Source Name**: `taller_postgis`
-- **Description**: `Base de datos PostGIS con datos del cirso`
+- **Description**: `Base de datos PostGIS con datos del curso`
 - - **Enabled**
 
 #### Parámetros de Conexión
