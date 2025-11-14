@@ -860,4 +860,3 @@ En este capítulo has aprendido:
 **Capítulo anterior**: [Capítulo 4: Servicios Web Geográficos](./capitulo-04-servicios-web-geograficos.md)
 
 **Próximo capítulo**: [Capítulo 6: Carga de Datos a PostgreSQL](./capitulo-06-carga-datos-postgresql.md)
-s
