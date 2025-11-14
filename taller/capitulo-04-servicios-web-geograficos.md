@@ -16,10 +16,10 @@
 
 **OGC** (Open Geospatial Consortium) es una organización internacional que desarrolla estándares abiertos para:
 
-- 🌐 **Interoperabilidad**: Sistemas geoespaciales que funcionan juntos
-- 📡 **Servicios web**: Acceso a datos geográficos vía internet
-- 📊 **Formatos de datos**: Intercambio de información geoespacial
-- 🔧 **APIs**: Interfaces de programación estándar
+- **Interoperabilidad**: Sistemas geoespaciales que funcionan juntos
+- **Servicios web**: Acceso a datos geográficos vía internet
+- **Formatos de datos**: Intercambio de información geoespacial
+- **APIs**: Interfaces de programación estándar
 
 ### Importancia de los Estándares OGC
 
@@ -73,10 +73,10 @@
 
 ### Características
 
-- 📷 **Salida**: Imágenes (PNG, JPEG, GIF)
-- 🎨 **Estilos**: Renderizado en el servidor
-- 🚀 **Rendimiento**: Eficiente para visualización
-- ❌ **Limitación**: No permite consultar atributos individuales
+- **Salida**: Imágenes (PNG, JPEG, GIF)
+- **Estilos**: Renderizado en el servidor
+- **Rendimiento**: Eficiente para visualización
+- **Limitación**: No permite consultar atributos individuales
 
 ### Versiones de WMS
 
@@ -229,10 +229,10 @@ http://localhost:8080/geoserver/wms?
 
 ### Características
 
-- 📊 **Salida**: Datos vectoriales (GML, GeoJSON, CSV)
-- 🔍 **Consultas**: Filtrado por atributos y espaciales
-- ✏️ **Edición**: WFS-T permite crear, actualizar, eliminar
-- 📐 **Geometrías**: Acceso a coordenadas exactas
+- **Salida**: Datos vectoriales (GML, GeoJSON, CSV)
+- **Consultas**: Filtrado por atributos y espaciales
+- **Edición**: WFS-T permite crear, actualizar, eliminar
+- **Geometrías**: Acceso a coordenadas exactas
 
 ### Versiones de WFS
 

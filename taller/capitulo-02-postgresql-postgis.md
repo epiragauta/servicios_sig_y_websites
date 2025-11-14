@@ -22,11 +22,11 @@
 
 ### ¿Por qué PostgreSQL?
 
-- 🆓 **Gratuito y de código abierto**
-- 🚀 **Alto rendimiento**
-- 🔒 **Seguro y confiable**
-- 🌍 **Soporte para datos espaciales mediante PostGIS**
-- 📊 **Amplia adopción en la industria**
+- **Gratuito y de código abierto**
+- **Alto rendimiento**
+- **Seguro y confiable**
+- **Soporte para datos espaciales mediante PostGIS**
+- **Amplia adopción en la industria**
 
 ## 2.2 ¿Qué es PostGIS?
 
@@ -317,11 +317,11 @@ List of installed extensions
 
 #### Características
 
-- 🖥️ Interfaz gráfica intuitiva
-- 📊 Visualización de datos y esquemas
-- ✏️ Editor SQL con autocompletado
-- 📈 Monitor de rendimiento
-- 🔧 Herramientas de backup y restore
+- Interfaz gráfica intuitiva
+- Visualización de datos y esquemas
+- Editor SQL con autocompletado
+- Monitor de rendimiento
+- Herramientas de backup y restore
 
 #### Acceso
 

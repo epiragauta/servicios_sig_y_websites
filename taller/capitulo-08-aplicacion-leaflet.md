@@ -19,12 +19,12 @@
 
 ### Características
 
-- 🪶 **Ligero**: ~42 KB de JavaScript
-- 📱 **Mobile-friendly**: Diseñado para móviles
-- 🔌 **Extensible**: Cientos de plugins
-- 🎨 **Personalizable**: Control total sobre el diseño
-- 🌐 **Compatible**: Funciona en todos los navegadores modernos
-- 🆓 **Código abierto**: Licencia BSD
+- **Ligero**: ~42 KB de JavaScript
+- **Mobile-friendly**: Diseñado para móviles
+- **Extensible**: Cientos de plugins
+- **Personalizable**: Control total sobre el diseño
+- **Compatible**: Funciona en todos los navegadores modernos
+- **Código abierto**: Licencia BSD
 
 ### Ventajas sobre Otras Bibliotecas
 
@@ -32,7 +32,7 @@
 |----------------|---------|------------|-------------|
 | **Tamaño** | 42 KB | ~200 KB | ~500 KB |
 | **Curva de aprendizaje** | Baja | Media | Baja |
-| **Código abierto** | - | - | ❌ |
+| **Código abierto** | - | - | - |
 | **Soporte OGC** | Plugin | Nativo | Limitado |
 | **Personalización** | Alta | Muy alta | Media |
 | **Mobile** | Excelente | Buena | Buena |

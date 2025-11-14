@@ -17,11 +17,11 @@
 
 ### Características
 
-- 📝 **Basado en JSON**: Fácil de leer y escribir
-- 🌐 **Web-friendly**: Compatible con JavaScript
-- 📊 **Geometrías y atributos**: Combina forma y datos
-- 🔓 **Estándar abierto**: RFC 7946
-- 🚀 **Ampliamente soportado**: Leaflet, OpenLayers, QGIS, PostGIS
+- **Basado en JSON**: Fácil de leer y escribir
+- **Web-friendly**: Compatible con JavaScript
+- **Geometrías y atributos**: Combina forma y datos
+- **Estándar abierto**: RFC 7946
+- **Ampliamente soportado**: Leaflet, OpenLayers, QGIS, PostGIS
 
 ### Estructura Básica
 
@@ -353,10 +353,10 @@ ogr2ogr -f GeoJSON departamentos.geojson PG:"host=localhost dbname=taller_gis us
 
 ### Características
 
-- 🎨 **Estilos personalizados**: Colores, símbolos, etiquetas
-- 📐 **Basado en reglas**: Estilos condicionales
-- 🔄 **Portable**: Funciona en diferentes servidores OGC
-- 📝 **XML**: Formato estructurado y validable
+- **Estilos personalizados**: Colores, símbolos, etiquetas
+- **Basado en reglas**: Estilos condicionales
+- **Portable**: Funciona en diferentes servidores OGC
+- **XML**: Formato estructurado y validable
 
 ### Estructura de un SLD
 
@@ -860,3 +860,4 @@ En este capítulo has aprendido:
 **Capítulo anterior**: [Capítulo 4: Servicios Web Geográficos](./capitulo-04-servicios-web-geograficos.md)
 
 **Próximo capítulo**: [Capítulo 6: Carga de Datos a PostgreSQL](./capitulo-06-carga-datos-postgresql.md)
+s

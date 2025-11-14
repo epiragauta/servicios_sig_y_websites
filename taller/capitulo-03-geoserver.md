@@ -14,12 +14,12 @@
 
 ### Características Principales
 
-- 🌐 **Servidor de mapas**: Publica mapas a través de estándares OGC
-- 📊 **Múltiples fuentes de datos**: Shapefiles, PostGIS, Oracle, MySQL, etc.
-- 🎨 **Estilos personalizables**: Mediante SLD y CSS
-- 🔌 **Extensible**: Arquitectura de plugins
-- 📡 **APIs REST**: Administración programática
-- 🔒 **Seguridad**: Control de acceso granular
+- **Servidor de mapas**: Publica mapas a través de estándares OGC
+- **Múltiples fuentes de datos**: Shapefiles, PostGIS, Oracle, MySQL, etc.
+- **Estilos personalizables**: Mediante SLD y CSS
+- **Extensible**: Arquitectura de plugins
+- **APIs REST**: Administración programática
+- **Seguridad**: Control de acceso granular
 
 ### Servicios Soportados
 
@@ -521,11 +521,11 @@ C:\Program Files\GeoServer\logs\geoserver.log
 
 ### Seguridad
 
-- 🔒 Cambia usuario y contraseña de `admin`
-- 🔒 Crea usuarios con permisos limitados
-- 🔒 Restringe acceso a datos sensibles
-- 🔒 Usa HTTPS en producción
-- 🔒 Mantén GeoServer actualizado
+- Cambia usuario y contraseña de `admin`
+- Crea usuarios con permisos limitados
+- Restringe acceso a datos sensibles
+- Usa HTTPS en producción
+- Mantén GeoServer actualizado
 
 ## Resumen
 

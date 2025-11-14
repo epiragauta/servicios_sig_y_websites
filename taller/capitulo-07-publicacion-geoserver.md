@@ -56,10 +56,10 @@ Deberías ver el workspace `taller` en la lista.
 
 ### ¿Para Qué Sirven los Workspaces?
 
-- 📁 **Organización**: Separar proyectos o temas
-- 🔒 **Seguridad**: Permisos por workspace
-- 🌐 **Namespaces**: Evitar conflictos de nombres
-- 🎯 **URLs**: Servicios específicos por workspace
+- **Organización**: Separar proyectos o temas
+- **Seguridad**: Permisos por workspace
+- **Namespaces**: Evitar conflictos de nombres
+- **URLs**: Servicios específicos por workspace
 
 **Ejemplo de URLs**:
 ```
@@ -614,7 +614,7 @@ En el store `taller_postgis`:
 3. **Add new user**:
    - **User name**: `viewer`
    - **Password**: `viewer123`
-   - **Enabled**: ✅
+   - **Enabled**: 
    - **Roles**: `ROLE_VIEWER`
 4. **Save**
 

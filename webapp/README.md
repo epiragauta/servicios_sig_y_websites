@@ -4,14 +4,14 @@ Esta es una aplicación web interactiva que consume servicios WMS y WFS de GeoSe
 
 ## Características
 
-- 🗺️ Visualización de departamentos y municipios mediante WMS
-- 🔍 Búsqueda de departamentos por nombre
-- 📊 Información detallada al hacer clic
-- 🎨 Múltiples capas base (OpenStreetMap, Satélite, CartoDB)
-- 📱 Diseño responsive (funciona en móvil y desktop)
-- ⚡ Interactividad con datos WFS (GeoJSON)
-- 🎯 Highlight al pasar el mouse
-- 📍 Control de escala y capas
+- Visualización de departamentos y municipios mediante WMS
+- Búsqueda de departamentos por nombre
+- Información detallada al hacer clic
+- Múltiples capas base (OpenStreetMap, Satélite, CartoDB)
+- Diseño responsive (funciona en móvil y desktop)
+- Interactividad con datos WFS (GeoJSON)
+- Highlight al pasar el mouse
+- Control de escala y capas
 
 ## Requisitos Previos
 
@@ -234,7 +234,8 @@ Este proyecto es parte del Curso de Servicios Web Geográficos y está disponibl
 
 ## Autor
 
-Curso de Servicios Web Geográficos - 2024
+Edwin Piragauta Vargas
+Curso de Servicios Web Geográficos - 2025
 
 ---
 
