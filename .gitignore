@@ -6,6 +6,9 @@ nivelacion/datos/*.shx
 nivelacion/datos/*.prj
 nivelacion/datos/*.cpg
 
+# Salida por defecto del script si se ejecuta sin --out (cae en la raíz del repo)
+/datos/
+
 # Entornos y dependencias
 node_modules/
 venv/
