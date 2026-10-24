@@ -3,13 +3,14 @@
 Descarga el paquete de datos de Boyacá para el curso.
 
 Fuentes: IDE Boyacá (ArcGIS FeatureServer) y DANE (MGN 2024).
-Salida: GeoJSON en 06_Propuesta_2026-2/datos/ (o el directorio indicado).
+Salida: GeoJSON en el directorio indicado con --out (por defecto ../datos).
 Sin dependencias externas: solo biblioteca estándar.
 
 Uso:
-    python3 descargar_boyaca.py
-    python3 descargar_boyaca.py --out ../../04_Datos/boyaca
-    python3 descargar_boyaca.py --shp   # convierte a Shapefile si ogr2ogr existe
+    python descargar_boyaca.py
+    python descargar_boyaca.py --out nivelacion/datos
+    python descargar_boyaca.py --shp                 # convierte a Shapefile si ogr2ogr existe
+    python descargar_boyaca.py --timeout 180 --retries 6 --pause 2
 """
 
 from __future__ import annotations
@@ -17,9 +18,12 @@ from __future__ import annotations
 import argparse
 import json
 import shutil
+import socket
+import ssl
 import subprocess
 import sys
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -72,8 +76,41 @@ TAREAS = [
 
 MAX_REGISTROS = 2000  # límite por defecto de ArcGIS
 
+# Errores de red/TLS que conviene reintentar (incluye "handshake operation timed out").
+ERRORES_RED = (urllib.error.URLError, ssl.SSLError, socket.timeout, TimeoutError, ConnectionError)
 
-def descargar(url: str, params: dict, destino: Path) -> int:
+
+def _hint_red(err: BaseException) -> bool:
+    """¿El error parece un problema de red/TLS (handshake, timeout, conexión)?"""
+    texto = str(err).lower()
+    return isinstance(err, ERRORES_RED) or "handshake" in texto or "timed out" in texto
+
+
+def fetch_json(url: str, timeout: int, retries: int) -> dict:
+    """GET con reintentos y backoff exponencial. Devuelve el JSON parseado."""
+    ultimo: BaseException | None = None
+    for intento in range(1, retries + 1):
+        try:
+            req = urllib.request.Request(
+                url,
+                headers={
+                    "User-Agent": "curso-sig-ujdec/1.1",
+                    "Accept": "application/json",
+                },
+            )
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                return json.load(r)
+        except ERRORES_RED as e:  # noqa: PERF203
+            ultimo = e
+            if intento < retries:
+                espera = min(2 ** intento, 30)
+                print(f"    reintento {intento}/{retries - 1} tras '{e}' — espera {espera}s")
+                time.sleep(espera)
+    assert ultimo is not None
+    raise ultimo
+
+
+def descargar(url: str, params: dict, destino: Path, timeout: int, retries: int) -> int:
     """Descarga con paginación por resultOffset. Devuelve el número de features."""
     features: list[dict] = []
     offset = 0
@@ -82,10 +119,8 @@ def descargar(url: str, params: dict, destino: Path) -> int:
         q["resultOffset"] = str(offset)
         q["resultRecordCount"] = str(MAX_REGISTROS)
         full = f"{url}?{urllib.parse.urlencode(q)}"
-        req = urllib.request.Request(full, headers={"User-Agent": "curso-sig-ujdec/1.0"})
-        with urllib.request.urlopen(req, timeout=90) as r:
-            data = json.load(r)
 
+        data = fetch_json(full, timeout=timeout, retries=retries)
         if "error" in data:
             raise RuntimeError(f"ArcGIS error: {data['error']}")
 
@@ -117,29 +152,49 @@ def a_shapefile(geojson: Path) -> None:
 
 
 def main() -> int:
-    ap = argparse.ArgumentParser()
+    ap = argparse.ArgumentParser(description="Descarga el paquete de datos de Boyacá.")
     ap.add_argument("--out", default=str(Path(__file__).resolve().parent.parent / "datos"))
-    ap.add_argument("--shp", action="store_true")
+    ap.add_argument("--shp", action="store_true", help="también exporta a Shapefile (requiere ogr2ogr)")
+    ap.add_argument("--timeout", type=int, default=120, help="segundos por petición (def. 120)")
+    ap.add_argument("--retries", type=int, default=4, help="intentos por petición (def. 4)")
+    ap.add_argument("--pause", type=float, default=1.0, help="segundos de pausa entre capas (def. 1.0)")
     args = ap.parse_args()
 
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
-    print(f"Destino: {out}\n")
+    print(f"Destino: {out}")
+    print(f"timeout={args.timeout}s · retries={args.retries} · pause={args.pause}s\n")
 
     fallos = 0
-    for t in TAREAS:
+    fallo_red = False
+    for i, t in enumerate(TAREAS):
         print(f"[{t['nombre']}]")
         try:
-            n = descargar(t["url"], t["params"], out / f"{t['nombre']}.geojson")
+            n = descargar(t["url"], t["params"], out / f"{t['nombre']}.geojson",
+                          timeout=args.timeout, retries=args.retries)
             print(f"  ✓ {n} features → {t['nombre']}.geojson")
             if args.shp:
                 a_shapefile(out / f"{t['nombre']}.geojson")
         except Exception as e:  # noqa: BLE001
             fallos += 1
+            fallo_red = fallo_red or _hint_red(e)
             print(f"  ✗ {type(e).__name__}: {e}")
+        # Pausa entre capas para no saturar el servidor (salvo tras la última).
+        if i < len(TAREAS) - 1:
+            time.sleep(args.pause)
         print()
 
     print(f"Listo. {len(TAREAS) - fallos}/{len(TAREAS)} descargas correctas.")
+    if fallo_red:
+        print(
+            "\nAlgunas capas fallaron por red/TLS (p. ej. 'handshake operation timed out').\n"
+            "Las capas 2 a 5 vienen de ArcGIS Online (services6.arcgis.com). Prueba:\n"
+            "  - Reejecutar el script (los reintentos suelen resolver cortes puntuales).\n"
+            "  - Subir el margen: --timeout 180 --retries 6 --pause 2\n"
+            "  - Usar otra red (algunas redes corporativas bloquean/limitan arcgis.com).\n"
+            "  - Si usas proxy, definir la variable de entorno HTTPS_PROXY antes de ejecutar.\n"
+            "  - Como alternativa, usar el paquete de datos ya incluido en el curso."
+        )
     return 1 if fallos else 0
 
 

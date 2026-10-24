@@ -10,9 +10,12 @@ Descarga el paquete de datos de Boyacá en GeoJSON desde el IDE Boyacá (ArcGIS 
 python scripts/descargar_boyaca.py                      # salida por defecto
 python scripts/descargar_boyaca.py --out nivelacion/datos
 python scripts/descargar_boyaca.py --shp                # también a Shapefile si hay ogr2ogr
+python scripts/descargar_boyaca.py --timeout 180 --retries 6 --pause 2
 ```
 
 Genera: municipios (123), veredas (1.713), hospitales (464), red vial (614) y provincias (123).
+
+> **Si falla con "handshake operation timed out"** (típico en redes con proxy/firewall hacia `services6.arcgis.com`): el script ya **reintenta con backoff**. Vuelve a ejecutarlo; si persiste, sube el margen con `--timeout 180 --retries 6 --pause 2`, prueba otra red, o define `HTTPS_PROXY` si usas proxy. Las capas 2 a 5 provienen de ArcGIS Online; la 1 (municipios) del DANE.
 
 ## `verificar_fuentes.*` — chequeo de endpoints en vivo
 
