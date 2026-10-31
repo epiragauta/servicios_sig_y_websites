@@ -45,7 +45,7 @@ Los FeatureServer de ArcGIS devuelven **máximo ~2000 registros por petición** 
 import requests
 
 url = "https://services6.arcgis.com/Ex2fmFOuTOHRZtML/ArcGIS/rest/services/Veredas_Boyaca_2024/FeatureServer/0/query"
-base = {"where": "1=1", "outFields": "NOMB_MPIO,NOMBRE_VER", "outSR": "4326", "f": "geojson"}
+base = {"where": "COD_DPTO=15", "outFields": "NOMB_MPIO,NOMBRE_VER", "outSR": "4326", "f": "geojson"}
 
 features, offset, bloque = [], 0, 1000
 while True:
