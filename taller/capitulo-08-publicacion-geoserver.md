@@ -713,4 +713,4 @@ En este capítulo has aprendido:
 
 **Capítulo anterior**: [Capítulo 7: Carga de Datos a PostgreSQL](./capitulo-07-carga-datos-postgresql.md)
 
-**Próximo capítulo**: [Capítulo 9: Aplicación Web con Leaflet](./capitulo-09-aplicacion-leaflet.md)
+**Próximo capítulo**: [Capítulo 9: Vector tiles con pg_tileserv](./capitulo-09-pg-tileserv.md)

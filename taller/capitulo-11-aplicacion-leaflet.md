@@ -1,4 +1,4 @@
-# Capítulo 9: Aplicación Web con Leaflet
+# Capítulo 11: Aplicación Web con Leaflet
 
 ## Objetivos del Capítulo
 
@@ -11,7 +11,7 @@
 - Implementar controles y leyendas
 - Desplegar la aplicación
 
-## 9.1 ¿Qué es Leaflet?
+## 11.1 ¿Qué es Leaflet?
 
 ### Introducción
 
@@ -45,7 +45,7 @@
 - Necesitas control total del diseño
 - Proyecto de código abierto
 
-## 9.2 Configuración del Proyecto
+## 11.2 Configuración del Proyecto
 
 ### Estructura de Archivos
 
@@ -94,7 +94,7 @@ mkdir -p webapp/css webapp/js webapp/assets/images
 <script src="libs/leaflet/leaflet.js"></script>
 ```
 
-## 9.3 Crear el Mapa Básico
+## 11.3 Crear el Mapa Básico
 
 ### HTML Base (index.html)
 
@@ -168,7 +168,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 1. Abre `index.html` en un navegador
 2. Deberías ver un mapa de OpenStreetMap centrado en Colombia
 
-## 9.4 Consumir WMS de GeoServer
+## 11.4 Consumir WMS de GeoServer
 
 ### Agregar Capa WMS
 
@@ -221,7 +221,7 @@ L.control.layers(baseMaps, overlayMaps, {
 baseMaps["OpenStreetMap"].addTo(map);
 ```
 
-## 9.5 Consumir WFS de GeoServer
+## 11.5 Consumir WFS de GeoServer
 
 ### Cargar Datos GeoJSON desde WFS
 
@@ -331,7 +331,7 @@ const departamentosGeoJSON = L.geoJSON(data, {
 }).addTo(map);
 ```
 
-## 9.6 Agregar Controles Personalizados
+## 11.6 Agregar Controles Personalizados
 
 ### Panel de Información
 
@@ -414,7 +414,7 @@ L.control.scale({
 }).addTo(map);
 ```
 
-## 9.7 Búsqueda y Filtros
+## 11.7 Búsqueda y Filtros
 
 ### Búsqueda por Nombre
 
@@ -481,7 +481,7 @@ function loadDepartamentosByCQL(filter) {
 loadDepartamentosByCQL("dpto_ccdgo='25'"); // Solo Cundinamarca
 ```
 
-## 9.8 Marcadores y Popups
+## 11.8 Marcadores y Popups
 
 ### Agregar Marcador
 
@@ -520,7 +520,7 @@ const popupContent = `
 layer.bindPopup(popupContent);
 ```
 
-## 9.9 Ejemplo Completo: Aplicación del Curso
+## 11.9 Ejemplo Completo: Aplicación del Curso
 
 ### index.html
 
@@ -691,7 +691,7 @@ layer.bindPopup(popupContent);
 </html>
 ```
 
-## 9.10 Despliegue
+## 11.10 Despliegue
 
 ### Servidor Local
 
@@ -778,9 +778,51 @@ En este capítulo has aprendido:
 9. Crea una leyenda
 10. Despliega localmente con Python HTTP Server
 
+## 11.11 Consumir OGC API Features y vector tiles
+
+Hasta aquí la app consume **WMS** (imágenes) y **WFS** (GeoJSON) de GeoServer. Ahora sumamos las dos fuentes modernas que publicaste en los capítulos 9 y 10, con miras a una app más rica.
+
+### OGC API Features (pygeoapi — Capítulo 10)
+
+Leaflet consume **GeoJSON de forma nativa**, así que basta un `fetch` a la colección:
+
+```javascript
+fetch("http://localhost:5000/collections/municipios/items?limit=1000&f=json")
+  .then(r => r.json())
+  .then(geo => L.geoJSON(geo, {
+    onEachFeature: (f, layer) => layer.bindPopup(f.properties.mpio_cnmbr)
+  }).addTo(map));
+```
+
+Es el mismo patrón que usaste en el Capítulo 2 para consumir servicios ajenos, ahora contra **tu** servicio.
+
+### Vector tiles (pg_tileserv — Capítulo 9)
+
+Leaflet **no** renderiza MVT de forma nativa. Dos caminos:
+
+- **Leaflet.VectorGrid** (plugin): renderiza las teselas `.pbf` directamente.
+  ```javascript
+  L.vectorGrid.protobuf(
+    "http://localhost:7800/public.municipios/{z}/{x}/{y}.pbf",
+    { vectorTileLayerStyles: { "public.municipios": { color: "#3388ff", weight: 1 } } }
+  ).addTo(map);
+  ```
+- **MapLibre GL JS** (Módulo 5): renderiza vector tiles de forma nativa, con estilos *data-driven*. Es la opción recomendada cuando los vector tiles son el eje de la app.
+
+### ¿Qué fuente uso para qué?
+
+| Fuente | Entrega | Úsala para |
+|---|---|---|
+| **WMS** (GeoServer) | Imagen | Mapas base/temáticos rápidos, sin interacción fina |
+| **WFS / OGC API Features** | GeoJSON | Interacción y análisis con volúmenes moderados |
+| **Vector tiles** (pg_tileserv) | MVT | Muchos datos, zoom fluido, estilizado en el cliente |
+
+> **CORS:** al pedir desde el navegador servicios en otros puertos (5000, 7800, 8080) puede hacer falta habilitar CORS en cada servicio. GeoServer, pygeoapi y pg_tileserv lo permiten; se detalla en el Módulo 7 (seguridad).
+
 ## Referencias
 
 - Leaflet Documentation. (2024). *Leaflet - an open-source JavaScript library for interactive maps*. https://leafletjs.com/
+- Leaflet.VectorGrid. *Vector tiles con Leaflet*. https://github.com/Leaflet/Leaflet.VectorGrid
 - Leaflet Tutorials. (2024). *Quick Start Guide*. https://leafletjs.com/examples/quick-start/
 - Leaflet Tutorials. (2024). *Using GeoJSON with Leaflet*. https://leafletjs.com/examples/geojson/
 - Leaflet Tutorials. (2024). *Interactive Choropleth Map*. https://leafletjs.com/examples/choropleth/
@@ -789,7 +831,9 @@ En este capítulo has aprendido:
 
 ---
 
-**Capítulo anterior**: [Capítulo 8: Publicación de Capas en GeoServer](./capitulo-08-publicacion-geoserver.md)
+**Capítulo anterior**: [Capítulo 10: OGC API Features con pygeoapi](./capitulo-10-pygeoapi.md)
+
+**Próximo capítulo**: [Capítulo 12: Cloud-native: COG, PMTiles y STAC](./capitulo-12-cloud-native-stac.md)
 
 **¡Felicitaciones!** Has completado el curso de Servicios Web Geográficos.
 

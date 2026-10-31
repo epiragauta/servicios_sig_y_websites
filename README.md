@@ -19,7 +19,7 @@ Aprender a configurar, administrar y consumir servicios web geográficos utiliza
 
 ## Curso
 
-El curso está organizado en 9 capítulos:
+El curso está organizado en 12 capítulos:
 
 1. [Introducción a Git](./taller/capitulo-01-git.md)
 2. [Explorar y consumir servicios OGC existentes](./taller/capitulo-02-consumir-servicios-ogc.md)
@@ -29,7 +29,10 @@ El curso está organizado en 9 capítulos:
 6. [Estándares para Información Geográfica (GeoJSON, SLD)](./taller/capitulo-06-estandares-geograficos.md)
 7. [Carga de Datos a PostgreSQL](./taller/capitulo-07-carga-datos-postgresql.md)
 8. [Publicación de Capas en GeoServer](./taller/capitulo-08-publicacion-geoserver.md)
-9. [Aplicación Web con Leaflet](./taller/capitulo-09-aplicacion-leaflet.md)
+9. [Vector tiles con pg_tileserv](./taller/capitulo-09-pg-tileserv.md)
+10. [OGC API Features con pygeoapi](./taller/capitulo-10-pygeoapi.md)
+11. [Aplicación Web con Leaflet](./taller/capitulo-11-aplicacion-leaflet.md)
+12. [Cloud-native: COG, PMTiles y STAC](./taller/capitulo-12-cloud-native-stac.md)
 
 **Comienza aquí**: [Índice del Curso](./taller/README.md)
 
@@ -89,6 +92,7 @@ docker compose ps
 
 - PostGIS → `localhost:5432` (base `taller_gis`, usuario/clave `postgres`/`postgres`)
 - GeoServer → [http://localhost:8080/geoserver](http://localhost:8080/geoserver) (`admin`/`geoserver`)
+- pg_tileserv → [http://localhost:7800](http://localhost:7800) (vector tiles MVT desde PostGIS)
 
 ### 3. Seguir el Curso
 

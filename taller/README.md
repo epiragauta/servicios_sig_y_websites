@@ -66,13 +66,27 @@ Aprender a configurar, administrar y consumir servicios web geográficos utiliza
 - Aplicación de estilos SLD
 - Servicios WMS y WFS, y WMTS con GeoWebCache
 
-### [Capítulo 9: Aplicación Web con Leaflet](./capitulo-09-aplicacion-leaflet.md)
-- Introducción a Leaflet
-- Configuración del proyecto
-- Consumo de servicios WMS
-- Consumo de servicios WFS
-- Aplicación práctica: Visualización de departamentos y municipios
-- Interactividad y controles
+### [Capítulo 9: Vector tiles con pg_tileserv](./capitulo-09-pg-tileserv.md)
+- Qué son los vector tiles (MVT)
+- Publicar tablas PostGIS como teselas vectoriales
+- URL de teselas y previsualización
+- pg_tileserv frente a GeoServer
+
+### [Capítulo 10: OGC API Features con pygeoapi](./capitulo-10-pygeoapi.md)
+- Publicar PostGIS como OGC API Features
+- Configuración del provider PostgreSQL
+- Endpoints /collections e items (GeoJSON)
+- Comparación con WFS y FeatureServer
+
+### [Capítulo 11: Aplicación Web con Leaflet](./capitulo-11-aplicacion-leaflet.md)
+- Mapa con Leaflet; consumo de WMS y WFS
+- Consumo de OGC API Features y vector tiles
+- Interactividad, controles y despliegue
+
+### [Capítulo 12: Cloud-native: COG, PMTiles y STAC](./capitulo-12-cloud-native-stac.md)
+- Generar un COG con GDAL y servirlo con Titiler
+- PMTiles y GeoParquet
+- Catálogo STAC mínimo y STAC Browser
 
 ## Datos del Curso
 
@@ -102,7 +116,10 @@ servicios_sig_y_websites/
 │   ├── capitulo-06-estandares-geograficos.md
 │   ├── capitulo-07-carga-datos-postgresql.md
 │   ├── capitulo-08-publicacion-geoserver.md
-│   └── capitulo-09-aplicacion-leaflet.md
+│   ├── capitulo-09-pg-tileserv.md
+│   ├── capitulo-10-pygeoapi.md
+│   ├── capitulo-11-aplicacion-leaflet.md
+│   └── capitulo-12-cloud-native-stac.md
 └── webapp/                        # Aplicación web de ejemplo
     └── index.html
 ```

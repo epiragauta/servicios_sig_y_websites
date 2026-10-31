@@ -9,6 +9,7 @@
 # Servicios y accesos:
 #   PostgreSQL/PostGIS -> localhost:5432   (db: taller_gis, user/pass: postgres/postgres)
 #   GeoServer          -> http://localhost:8080/geoserver   (admin/geoserver)
+#   pg_tileserv        -> http://localhost:7800   (vector tiles MVT desde PostGIS)
 #
 # Nota: GeoServer y PostGIS comparten la red de Docker Compose. Desde GeoServer,
 # el host de la base de datos es el NOMBRE DEL SERVICIO -> "postgis" (no "localhost").
@@ -45,6 +46,18 @@ services:
         condition: service_healthy
     volumes:
       - geoserver_data:/opt/geoserver_data
+
+  pg_tileserv:
+    image: pramsey/pg_tileserv:latest
+    container_name: curso_pg_tileserv
+    environment:
+      # Conecta al contenedor de PostGIS por el nombre del servicio (postgis).
+      DATABASE_URL: "postgres://postgres:postgres@postgis:5432/taller_gis"
+    ports:
+      - "7800:7800"
+    depends_on:
+      postgis:
+        condition: service_healthy
 
 volumes:
   pgdata:
